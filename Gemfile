@@ -1,4 +1,5 @@
 source 'https://rubygems.org/'
+ruby '2.3.3'
 
 gem 'rails', '~> 5.1.2'
 gem 'pg', '~> 0.18'
@@ -6,8 +7,14 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+gem 'simple_form'
+gem 'turbolinks'
+gem 'jbuilder'
 gem 'devise'
 gem 'foundation-rails'
+gem 'carrierwave'
+gem 'active_model_serializers', '<= 0.9.9'
+
 
 group :development do
   gem 'listen', '~> 3.0.5'
@@ -23,8 +30,11 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda'
   gem 'valid_attribute'
+  gem 'shoulda-matchers', require: false
 end
-
+group :test do
+  gem 'coveralls', require: false
+end
 group :production do
   gem 'rails_12factor'
 end
