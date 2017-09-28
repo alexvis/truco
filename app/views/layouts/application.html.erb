@@ -12,11 +12,18 @@
   </head>
 
   <body>
+    <div class="top-bar">
+
+
+    <% if !user_signed_in?%>
     <%= link_to 'Sing in', user_session_path %>
     <%= link_to 'Sing Up', new_user_registration_path %>
-    <%= link_to 'Sing Out', destroy_user_session_path%>
-
+    <% else %>
+    <%= link_to 'Sing Out', destroy_user_session_path, method: :delete %>
+    <% end %>
+  </div>
     <%= yield %>
+  
     <%= javascript_include_tag "application" %>
   </body>
 </html>
