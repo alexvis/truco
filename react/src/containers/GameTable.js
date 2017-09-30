@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from '../components/Cards'
 
 class GameTable extends React.Component {
   constructor(props) {
@@ -8,11 +9,11 @@ class GameTable extends React.Component {
     }
   }
   render(){
-    debugger
+
     return(
 
-
       <div>
+      <Card/>
       <h1> {this.state.game}</h1>
       </div>
 
