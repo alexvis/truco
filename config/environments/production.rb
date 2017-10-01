@@ -16,7 +16,7 @@ Rails.application.configure do
   enable_starttls_auto: true
 }
   config.action_mailer.default_url_options = {
-    host: "trucon.herokuapp.com"
+    host: "rockPaperScissors-react.herokuapp.com"
   }
 
   # Eager load code on boot. This eager loads most of Rails and
