@@ -1,5 +1,4 @@
 import React from 'react'
-import Card from '../components/Cards'
 
 class GameTable extends React.Component {
   constructor(props) {
@@ -56,14 +55,14 @@ class GameTable extends React.Component {
         <div>
           <h1>Computer Choose</h1>
           <div className="rock"></div>
-          <h1>You loos!</h1>
+          <h1>You Lose!</h1>
         </div>
     } else if (this.state.computerInput === 2 && this.state.userInput === "r"){
       response =
         <div>
           <h1>Computer Choose</h1>
           <div className="paper"></div>
-          <h1>You Loos!</h1>
+          <h1>You Lose!</h1>
         </div>
     } else if (this.state.computerInput === 2 && this.state.userInput === "p"){
         response =
@@ -91,7 +90,7 @@ class GameTable extends React.Component {
           <div>
             <h1>Computer Choose</h1>
             <div className="scissors"></div>
-            <h1>You Loos!</h1>
+            <h1>You Lose!</h1>
           </div>
     } else if (this.state.computerInput === 3 && this.state.userInput === "s"){
         response =
@@ -110,9 +109,9 @@ class GameTable extends React.Component {
     return(
       <div>
         <div className="userInputBox large-6 columns">
-          <div className="rock large-12 medium-12 columns" onClick={this.handleRockClick}></div>
-          <div className="paper large-12 medium-12 columns" onClick={this.handlePaperClick}></div>
-          <div className="scissors large-12 medium-12 columns" onClick={this.handleScissorsClick}></div>
+          <div className="rock large-12 columns" onClick={this.handleRockClick}></div>
+          <div className="paper large-12 columns" onClick={this.handlePaperClick}></div>
+          <div className="scissors large-12 columns" onClick={this.handleScissorsClick}></div>
         </div>
         <div className="button-group">
           <button className="button" onClick={this.cleanOnClick}>Start Over</button>
