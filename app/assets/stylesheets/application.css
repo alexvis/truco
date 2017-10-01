@@ -16,3 +16,33 @@
  *= requier foundation
 
  */
+
+ .rock {
+   background-image: url(rock.gif);
+   height: 15em;
+   width: 10em;
+   margin: auto;
+   background-size: cover;
+
+ }
+
+ .paper{
+   background-image: url(paper.jpg);
+   height: 15em;
+   width: 10em;
+   margin: auto;
+   background-size: cover;
+
+ }
+
+ .scissors{
+   background-image: url(scissors.jpg);
+   height: 15em;
+   width: 10em;
+   margin: auto;
+   background-size: cover;
+ }
+
+ .userInputBox{
+
+ }
