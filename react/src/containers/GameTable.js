@@ -4,9 +4,12 @@ class GameTable extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      game: 'hello from GameTable',
+      rock: null,
+      paper: null,
+      scissors: null,
       userInput: null,
       computerInput: null,
+
     }
     this.handleRockClick = this.handleRockClick.bind(this);
     this.handlePaperClick = this.handlePaperClick.bind(this);
@@ -17,21 +20,36 @@ class GameTable extends React.Component {
   handleRockClick(){
     this.setState({userInput: "r"})
     this.setState({computerInput: Math.floor((Math.random() * 3) + 1)})
+    this.setState({rock: "Rock"})
+    this.setState({paper: null})
+    this.setState({scissors: null})
+
   }
 
   handlePaperClick(){
     this.setState({userInput: "p"})
     this.setState({computerInput: Math.floor((Math.random() * 3) + 1)})
+    this.setState({paper: "Paper"})
+    this.setState({rock: null})
+    this.setState({scissors: null})
+
   }
 
   handleScissorsClick(){
     this.setState({userInput: "s"})
     this.setState({computerInput: Math.floor((Math.random() * 3) + 1)})
+    this.setState({scissors: "Scissors"})
+    this.setState({rock: null})
+    this.setState({paper: null})
+
   }
 
   cleanOnClick(){
     this.setState({userInput: null});
-    this.setState({computerInput: null})
+    this.setState({computerInput: null});
+    this.setState({rock: null})
+    this.setState({paper: null})
+    this.setState({scissors: null})
   }
 
   render(){
@@ -109,9 +127,9 @@ class GameTable extends React.Component {
     return(
       <div>
         <div className="userInputBox large-6 columns">
-          <div className="rock large-12 columns" onClick={this.handleRockClick}></div>
-          <div className="paper large-12 columns" onClick={this.handlePaperClick}></div>
-          <div className="scissors large-12 columns" onClick={this.handleScissorsClick}></div>
+          <div className="rock large-12 columns" onClick={this.handleRockClick}>{this.state.rock}</div>
+          <div className="paper large-12 columns" onClick={this.handlePaperClick}>{this.state.paper}</div>
+          <div className="scissors large-12 columns" onClick={this.handleScissorsClick}>{this.state.scissors}</div>
         </div>
         <div className="button-group">
           <button className="button" onClick={this.cleanOnClick}>Start Over</button>
