@@ -17,6 +17,11 @@ var config = {
   },
   devtool: 'eval-source-map'
 }
+module: {
+    loaders: [
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' }
+    ]
+  }
 
 if (process.env.NODE_ENV === 'production') {
   delete config.devtool;

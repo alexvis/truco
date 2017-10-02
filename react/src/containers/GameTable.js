@@ -38,66 +38,66 @@ class GameTable extends React.Component {
     let response
     if (this.state.computerInput === 1 && this.state.userInput === "r"){
         response =
-          <div>
-            <h1>Computer Choose</h1>
+          <div className="panel">
+            <h3>Computer Choose</h3>
             <div className="rock"></div>
-            <h1>Tie!</h1>
-          </div>
+            <h3>Tie!</h3>
+        </div>
     } else if (this.state.computerInput === 1 && this.state.userInput === "p"){
         response =
-          <div>
-            <h1>Computer Choose</h1>
+          <div className="panel">
+            <h3>Computer Choose</h3>
             <div className="rock"></div>
-            <h1>You Win!</h1>
+            <h3>You Win!</h3>
           </div>
     } else if (this.state.computerInput === 1 && this.state.userInput === "s"){
       response =
-        <div>
-          <h1>Computer Choose</h1>
+        <div className="panel">
+          <h3>Computer Choose</h3>
           <div className="rock"></div>
-          <h1>You Lose!</h1>
+          <h3>You Lose!</h3>
         </div>
     } else if (this.state.computerInput === 2 && this.state.userInput === "r"){
       response =
-        <div>
-          <h1>Computer Choose</h1>
+        <div className="panel">
+          <h3>Computer Choose</h3>
           <div className="paper"></div>
-          <h1>You Lose!</h1>
+          <h3>You Lose!</h3>
         </div>
     } else if (this.state.computerInput === 2 && this.state.userInput === "p"){
         response =
-          <div>
-            <h1>Computer Choose</h1>
+          <div className="panel">
+            <h3>Computer Choose</h3>
             <div className="paper"></div>
-            <h1>Tie!</h1>
+            <h3>Tie!</h3>
           </div>
     } else if (this.state.computerInput === 2 && this.state.userInput === "s"){
         response =
-          <div>
-            <h1>Computer Choose</h1>
+          <div className="panel">
+            <h3>Computer Choose</h3>
             <div className="paper"></div>
-            <h1>You Win!</h1>
+            <h3>You Win!</h3>
           </div>
     } else if (this.state.computerInput === 3 && this.state.userInput === "r"){
         response =
-          <div>
-            <h1>Computer Choose</h1>
+          <div className="panel">
+            <h3>Computer Choose</h3>
             <div className="scissors"></div>
-            <h1>You Win!</h1>
+            <h3>You Win!</h3>
           </div>
     } else if (this.state.computerInput === 3 && this.state.userInput === "p"){
         response =
-          <div>
-            <h1>Computer Choose</h1>
+          <div className="panel">
+            <h3>Computer Choose</h3>
             <div className="scissors"></div>
-            <h1>You Lose!</h1>
+            <h3>You Lose!</h3>
           </div>
     } else if (this.state.computerInput === 3 && this.state.userInput === "s"){
         response =
-          <div>
-            <h1>Computer Choose</h1>
+          <div className="panel">
+            <h3>Computer Choose</h3>
             <div className="scissors"></div>
-            <h1>Tie!</h1>
+            <h3>Tie!</h3>
           </div>
     } else {
       response = null

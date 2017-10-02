@@ -19,28 +19,30 @@
 
  .rock {
    background-image: url(rock.gif);
-   height: 15em;
+   height: 6em;
    width: 10em;
    margin: auto;
-   background-size: cover;
+   background-size: 100%;
 
  }
 
  .paper{
    background-image: url(paper.jpg);
-   height: 15em;
+   height: 10em;
    width: 10em;
    margin: auto;
-   background-size: cover;
+   background-size: 100%;
+
 
  }
 
  .scissors{
    background-image: url(scissors.jpg);
-   height: 15em;
+   height: 6em;
    width: 10em;
    margin: auto;
-   background-size: cover;
+   background-size: 100%;
+
  }
 
  .userInputBox{
