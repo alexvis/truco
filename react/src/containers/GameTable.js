@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 class GameTable extends React.Component {
   constructor(props) {
@@ -53,6 +54,7 @@ class GameTable extends React.Component {
   }
 
   render(){
+
     let response
     if (this.state.computerInput === 1 && this.state.userInput === "r"){
         response =
@@ -121,9 +123,6 @@ class GameTable extends React.Component {
       response = null
     }
 
-
-
-
     return(
       <div>
         <div className="userInputBox large-6 columns">
@@ -133,6 +132,7 @@ class GameTable extends React.Component {
         </div>
         <div className="button-group">
           <button className="button" onClick={this.cleanOnClick}>Start Over</button>
+          <Link to='/users/:id/friend' className="button">Frendly Game</Link>
         </div>
         {response}
       </div>

@@ -1,13 +1,12 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GameTable from './containers/GameTable';
+import App from './App';
+
 
 
 
 ReactDOM.render(
-  <div>
-  <GameTable/>
-  </div>,
+  <App/>,
   document.getElementById('app')
 );
