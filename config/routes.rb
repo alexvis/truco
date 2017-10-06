@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :welcome, only: [:index]
-  resources :users
+  resources :users, only: [:index, :show]
+  resources :computer, only: [:index]
+  resources :friend, only: [:index]
+
 
 end
