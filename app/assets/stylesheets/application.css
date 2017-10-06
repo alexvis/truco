@@ -29,10 +29,10 @@
 
  .paper{
    background-image: url(paper.jpg);
-   height: 10em;
+   height: 6em;
    width: 10em;
    margin: auto;
-   background-size: 100%;
+   background-size: 97%;
    color: red;
 
  }
@@ -47,6 +47,13 @@
 
  }
 
+ .right{
+   margin-left: 1em;
+ }
+
+ .button{
+   margin: 2em;
+ }
  .userInputBox{
 
  }

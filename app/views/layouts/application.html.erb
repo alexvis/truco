@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "rock_paper_scissors" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -14,16 +14,16 @@
   <body>
     <div class="top-bar">
 
-
-    <% if !user_signed_in?%>
-    <%= link_to 'Sing in', user_session_path %>
-    <%= link_to 'Sing Up', new_user_registration_path %>
-    <% else %>
-    <%= link_to 'Sing Out', destroy_user_session_path, method: :delete %>
-    <% end %>
-  </div>
+      <%= link_to 'Home', root_path  %>
+      <% if !user_signed_in?%>
+        <%= link_to 'Sign Up', new_user_registration_path, class: "right" %>
+        <%= link_to 'Sign in', user_session_path, class: "right" %>
+      <% else %>
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "right" %>
+      <% end %>
+    </div>
     <%= yield %>
-  
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>

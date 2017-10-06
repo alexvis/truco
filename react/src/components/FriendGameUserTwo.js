@@ -1,7 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router'
+import React from 'react';
 
-class GameTable extends React.Component {
+class FriendGameUserTwo extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -138,4 +137,4 @@ class GameTable extends React.Component {
   }
 }
 
-export default GameTable;
+export default FriendGameUserTwo;

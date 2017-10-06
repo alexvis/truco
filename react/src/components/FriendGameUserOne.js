@@ -1,7 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router'
+import React from 'react';
 
-class GameTable extends React.Component {
+class FrienGameUserOne extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -120,7 +119,6 @@ class GameTable extends React.Component {
     } else {
       response = null
     }
-
     return(
       <div>
         <div className="userInputBox large-6 columns">
@@ -138,4 +136,4 @@ class GameTable extends React.Component {
   }
 }
 
-export default GameTable;
+export default FrienGameUserOne;
