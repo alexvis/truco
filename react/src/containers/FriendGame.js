@@ -1,14 +1,29 @@
-import React from 'react'
-import BackButton from '../components/BackButton'
+import React from 'react';
+import FriendGameUserTwo from '../components/FriendGameUserTwo'
+import FriendGameUserOne from '../components/FriendGameUserOne'
 
-const FriendGame = props => {
+class FriendGame extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      userOne: null,
+      userTwo: null,
 
-  return(
-    <div>
-      <h1>Hello from frendly game</h1>
-      <BackButton/>
-    </div>
-  )
+
+    }
+
+  }
+
+
+  render(){
+    return(
+      <div>
+      <FriendGameUserOne/>
+      <FriendGameUserTwo/>
+      </div>
+
+    )
+  }
 }
 
 export default FriendGame;
