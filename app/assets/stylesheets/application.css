@@ -36,6 +36,9 @@
    color: red;
 
  }
+ h3{
+   text-align: center;
+ }
 
  .scissors{
    background-image: url(scissors.jpg);

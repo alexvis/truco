@@ -54,7 +54,6 @@ class GameTable extends React.Component {
 
   render(){
     let response
-    debugger
     if (this.state.computerInput === 1 && this.state.userInput === "r"){
         response =
           <div className="panel">
