@@ -7,7 +7,7 @@ const FriendGameUserTwo = (props) => {
   if(props.resultGame === null){
     result =
       <div className="row">
-        <div className="userInputBox large-6 medium-12 small-12 columns">
+        <div className="userInputBox large-12 medium-12 small-12 columns">
         <h3 className="playerTwo">Player Two</h3>
           <div className="rock one large-4 medium-4 small-4 columns" onClick={props.handleRockClickTwo}></div>
           <div className="paper one large-4 medium-4 small-4 columns" onClick={props.handlePaperClickTwo}></div>
@@ -18,7 +18,7 @@ const FriendGameUserTwo = (props) => {
   } else {
     result =
       <div className="row">
-        <div className="userInputBox large-6 medium-12 small-12 columns">
+        <div className="userInputBox large-12 medium-12 small-12 columns">
         <h3 className="playerTwo">Player Two</h3>
           <div className="rock large-4 medium-4 small-4 columns" >{props.rock}</div>
           <div className="paper large-4 medium-4 small-4 columns" >{props.paper}</div>
