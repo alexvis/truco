@@ -22,8 +22,8 @@
  }
  .rock {
    background-image: url(rock.gif);
-   height: 6em;
-   width: 10em;
+   height: 4em;
+   width: 8em;
    background-size: 100%;
    color: red;
 
@@ -31,8 +31,8 @@
 
  .paper{
    background-image: url(paper.jpg);
-   height: 6em;
-   width: 10em;
+   height: 4em;
+   width: 8em;
    margin: auto;
    background-size: 97%;
    color: yellow;
@@ -42,8 +42,8 @@
 
  .scissors{
    background-image: url(scissors.jpg);
-   height: 6em;
-   width: 10em;
+   height: 4em;
+   width: 8em;
    background-size: 100%;
    color: orange;
 
@@ -64,6 +64,7 @@
 
  .panel{
    margin-top: 1em;
+   margin-bottom: 0em;
  }
 
  .right{
@@ -72,8 +73,30 @@
 
  .button{
    margin: 2em;
+   margin-top: 0.5em;
+   margin-bottom: 1em;
  }
  .userInputBox{
    background-color: white;
    margin-top: 1em;
  }
+
+ .footer {
+  background-color: #E5473C;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  }
+
+.fa-github{
+  margin-right: 4em;
+  margin-top: 1em;
+  font-size: 1.6em;
+  color: black;
+}
+
+.fa-linkedin{
+  font-size: 1.6em
+}

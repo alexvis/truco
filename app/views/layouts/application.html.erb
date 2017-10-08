@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title><%= content_for?(:title) ? yield(:title) : "rock_paper_scissors" %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -23,6 +24,11 @@
       <% end %>
     </div>
     <%= yield %>
+
+      <div class="footer large-12 medium-12 small-12 columns">
+        <a class="fa fa-github" href="https://github.com/alexvis"> Github</a>
+        <a class="fa fa-linkedin" href="https://www.linkedin.com/in/avisconde"> Linkedin</a>
+      </div>
 
     <%= javascript_include_tag "application" %>
   </body>
