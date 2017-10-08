@@ -17,11 +17,13 @@
 
  */
 
+ body{
+   background-color: #B1C1E9;
+ }
  .rock {
    background-image: url(rock.gif);
    height: 6em;
    width: 10em;
-   margin: auto;
    background-size: 100%;
    color: red;
 
@@ -33,7 +35,8 @@
    width: 10em;
    margin: auto;
    background-size: 97%;
-   color: red;
+   color: yellow;
+   margin-left: 2em;
 
  }
 
@@ -41,11 +44,24 @@
    background-image: url(scissors.jpg);
    height: 6em;
    width: 10em;
-   margin: auto;
    background-size: 100%;
-   color: red;
+   color: orange;
 
  }
+
+ h3{
+   text-align: center;
+ }
+
+ .playerOne{
+   color: #34AD2B;
+ }
+
+ .playerTwo{
+   color: #1C5BEC;
+ }
+
+
 
  .right{
    margin-left: 1em;
@@ -55,5 +71,5 @@
    margin: 2em;
  }
  .userInputBox{
-
+   background-color: white;
  }
