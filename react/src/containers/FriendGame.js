@@ -19,7 +19,8 @@ class FriendGame extends React.Component {
       showOne: null,
       showTwo: null,
       showAll: null,
-    }
+      resultGame: null,
+    };
     this.handleRockClickOne = this.handleRockClickOne.bind(this);
     this.handlePaperClickOne = this.handlePaperClickOne.bind(this);
     this.handleScissorsClickOne = this.handleScissorsClickOne.bind(this);
@@ -27,74 +28,77 @@ class FriendGame extends React.Component {
     this.handlePaperClickTwo = this.handlePaperClickTwo.bind(this);
     this.handleScissorsClickTwo = this.handleScissorsClickTwo.bind(this);
     this.cleanOnClick = this.cleanOnClick.bind(this);
-    this.showGame = this.showGame.bind(this)
-
 
   }
 
   handleRockClickOne(){
-    this.setState({userOne: "r"})
-    this.setState({showGameOne: "hidde"})
-    this.setState({showGameTwo: "show"})
-    this.setState({rockOne: "Rock"})
+    this.setState({userOne: "r"});
+    this.setState({showGameOne: "hide"});
+    this.setState({showGameTwo: "show"});
+    this.setState({rockOne: "Rock"});
   }
 
   handlePaperClickOne(){
-    this.setState({userOne: "p"})
-    this.setState({showGameOne: "hidde"})
-    this.setState({showGameTwo: "show"})
-    this.setState({paperOne: "Paper"})
+    this.setState({userOne: "p"});
+    this.setState({showGameOne: "hide"});
+    this.setState({showGameTwo: "show"});
+    this.setState({paperOne: "Paper"});
   }
 
   handleScissorsClickOne(){
-    this.setState({userOne: "s"})
-    this.setState({showGameOne: "hidde"})
-    this.setState({showGameTwo: "show"})
-    this.setState({scissorsOne: "Scissors"})
+    this.setState({userOne: "s"});
+    this.setState({showGameOne: "hide"});
+    this.setState({showGameTwo: "show"});
+    this.setState({scissorsOne: "Scissors"});
   }
 
   handleRockClickTwo(){
-    this.setState({userTwo: "r"})
-    this.setState({showAll: null})
-    this.setState({showGameOne: null})
-    this.setState({showGameTwo: "show"})
-    this.setState({rockTwo: "Rock"})
+    this.setState({userTwo: "r"});
+    this.setState({showAll: null});
+    this.setState({showGameOne: null});
+    this.setState({showGameTwo: "show"});
+    this.setState({rockTwo: "Rock"});
+    this.setState({resultGame: "stop"});
+
 
   }
 
   handlePaperClickTwo(){
-    this.setState({userTwo: "p"})
-    this.setState({showAll: null})
-    this.setState({showGameOne: null})
-    this.setState({showGameTwo: "show"})
-    this.setState({paperTwo: "Paper"})
+    this.setState({userTwo: "p"});
+    this.setState({showAll: null});
+    this.setState({showGameOne: null});
+    this.setState({showGameTwo: "show"});
+    this.setState({paperTwo: "Paper"});
+    this.setState({resultGame: "stop"});
+
   }
 
   handleScissorsClickTwo(){
-    this.setState({userTwo: "s"})
-    this.setState({showAll: null})
-    this.setState({showGameOne: null})
-    this.setState({showGameTwo: "show"})
-    this.setState({scissorsTwo: "Scissors"})
+    this.setState({userTwo: "s"});
+    this.setState({showAll: null});
+    this.setState({showGameOne: null});
+    this.setState({showGameTwo: "show"});
+    this.setState({scissorsTwo: "Scissors"});
+    this.setState({resultGame: "stop"});
+
   }
 
   cleanOnClick(){
-    this.setState({rockOne: null})
-    this.setState({paperOne: null})
-    this.setState({scissorsOne: null})
-    this.setState({rockTwo: null})
-    this.setState({paperTwo: null})
-    this.setState({scissorsTwo: null})
-    this.setState({showGameOne: null})
-    this.setState({showGameTwo: null})
-    this.setState({userTwo: null})
-    this.setState({userOne: null})
-    this.setState({showAll: null})
+    this.setState({rockOne: null});
+    this.setState({paperOne: null});
+    this.setState({scissorsOne: null});
+    this.setState({rockTwo: null});
+    this.setState({paperTwo: null});
+    this.setState({scissorsTwo: null});
+    this.setState({showGameOne: null});
+    this.setState({showGameTwo: null});
+    this.setState({userTwo: null});
+    this.setState({userOne: null});
+    this.setState({showAll: null});
+    this.setState({resultGame: null});
   }
 
-  showGame(){
-    this.setState({showGameOne: "a"})
-  }
+
 
   render(){
     let response
@@ -160,6 +164,7 @@ class FriendGame extends React.Component {
             rock={this.state.rockTwo}
             paper={this.state.paperTwo}
             scissors={this.state.scissorsTwo}
+            resultGame={this.state.resultGame}
           />
 
       }
@@ -173,6 +178,8 @@ class FriendGame extends React.Component {
           rock={this.state.rockOne}
           paper={this.state.paperOne}
           scissors={this.state.scissorsOne}
+          resultGame={this.state.resultGame}
+
           />
 
       }

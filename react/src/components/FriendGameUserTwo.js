@@ -1,28 +1,38 @@
 import React from 'react';
 
-class FriendGameUserTwo extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
+const FriendGameUserTwo = (props) => {
 
-    }
-  }
+  let result
 
-  render(){
-    return(
-      <div>
-        <h3>PLayer Two</h3>
-        <div className="userInputBox large-6 columns">
-          <div className="rock large-12 columns" onClick={this.props.handleRockClickTwo}>{this.props.rock}</div>
-          <div className="paper large-12 columns" onClick={this.props.handlePaperClickTwo}>{this.props.paper}</div>
-          <div className="scissors large-12 columns" onClick={this.props.handleScissorsClickTwo}>{this.props.scissors}</div>
-        </div>
-        <div className="button-group">
+  if(props.resultGame === null){
+    result =
+      <div className="row">
+        <div className="userInputBox large-6 medium-12 small-12 columns">
+        <h3 className="playerTwo">Player Two</h3>
+          <div className="rock one large-4 medium-4 small-4 columns" onClick={props.handleRockClickTwo}></div>
+          <div className="paper one large-4 medium-4 small-4 columns" onClick={props.handlePaperClickTwo}></div>
+          <div className="scissors one large-4 medium-4 small-4 columns" onClick={props.handleScissorsClickTwo}></div>
         </div>
       </div>
 
-    )
+  } else {
+    result =
+      <div className="row">
+        <div className="userInputBox large-6 medium-12 small-12 columns">
+        <h3 className="playerTwo">Player Two</h3>
+          <div className="rock large-4 medium-4 small-4 columns" >{props.rock}</div>
+          <div className="paper large-4 medium-4 small-4 columns" >{props.paper}</div>
+          <div className="scissors large-4 medium-4 small-4 columns" >{props.scissors}</div>
+        </div>
+      </div>
+
   }
+
+  return(
+    <div>
+      {result}
+    </div>
+  )
 }
 
 export default FriendGameUserTwo;
