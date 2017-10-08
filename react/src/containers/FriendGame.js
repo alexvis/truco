@@ -105,7 +105,7 @@ class FriendGame extends React.Component {
     if (this.state.userOne === "r" && this.state.userTwo === "r"){
         response =
           <div className="panel">
-            <h3>Tie Game!</h3>
+            <h3>Tie!</h3>
         </div>
     } else if (this.state.userOne === "r" && this.state.userTwo === "p"){
         response =

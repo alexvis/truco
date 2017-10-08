@@ -62,6 +62,9 @@
  }
 
 
+ .panel{
+   margin-top: 1em;
+ }
 
  .right{
    margin-left: 1em;
@@ -72,4 +75,5 @@
  }
  .userInputBox{
    background-color: white;
+   margin-top: 1em;
  }
