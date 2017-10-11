@@ -20,10 +20,13 @@
         <%= link_to 'Sign Up', new_user_registration_path, class: "right" %>
         <%= link_to 'Sign in', user_session_path, class: "right" %>
       <% else %>
+        <%= image_tag(current_user.profile_photo, class: 'picture') if current_user.profile_photo? %>
         <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "right" %>
       <% end %>
     </div>
-    <%= yield %>
+    <div class="page">
+      <%= yield %>
+    </div>
 
       <div class="footer large-12 medium-12 small-12 columns">
         <a class="fa fa-github" href="https://github.com/alexvis"> Github</a>
