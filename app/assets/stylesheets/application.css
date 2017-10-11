@@ -26,6 +26,7 @@
    width: 8em;
    background-size: 100%;
    color: red;
+   margin-bottom: 0.5em;
 
  }
 
@@ -37,6 +38,7 @@
    background-size: 97%;
    color: yellow;
    margin-left: 2em;
+   margin-bottom: 0.5em;
 
  }
 
@@ -46,6 +48,7 @@
    width: 8em;
    background-size: 100%;
    color: orange;
+   margin-bottom: 0.5em;
 
  }
 
@@ -76,11 +79,19 @@
    margin-top: 0.5em;
    margin-bottom: 1em;
  }
+
  .userInputBox{
    background-color: white;
    margin-top: 1em;
  }
-
+ .page{
+   overflow: auto;
+ }
+ .picture{
+   width: 2em;
+   height: 1.5em;
+   margin-left: 0.7em;
+ }
  .footer {
   background-color: #E5473C;
   text-align: center;
