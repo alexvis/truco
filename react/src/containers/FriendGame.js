@@ -20,6 +20,8 @@ class FriendGame extends React.Component {
       showTwo: null,
       showAll: null,
       resultGame: null,
+      playerOne: "Player One",
+      playerTwo: "Player Two",
     };
     this.handleRockClickOne = this.handleRockClickOne.bind(this);
     this.handlePaperClickOne = this.handlePaperClickOne.bind(this);
@@ -96,59 +98,42 @@ class FriendGame extends React.Component {
     this.setState({userOne: null});
     this.setState({showAll: null});
     this.setState({resultGame: null});
+    this.setState({playerOne: "Player One"});
+    this.setState({playerTwo: "Player Two"})
   }
 
 
 
   render(){
-    let response
     if (this.state.userOne === "r" && this.state.userTwo === "r"){
-        response =
-          <div className="panel">
-            <h3>Tie!</h3>
-        </div>
+        this.setState({playerOne: "Player One Tie!"})
+        this.setState({playerTwo: "Player Two Tie!"})
     } else if (this.state.userOne === "r" && this.state.userTwo === "p"){
-        response =
-          <div className="panel">
-            <h3>Player Two Win!</h3>
-          </div>
+        this.setState({playerTwo: "Player Two Win!"})
+
     } else if (this.state.userOne === "r" && this.state.userTwo === "s"){
-      response =
-        <div className="panel">
-          <h3>Player One Win!</h3>
-        </div>
+        this.setState({playerOne: "Player One Win!"})
+
     } else if (this.state.userOne === "p" && this.state.userTwo === "r"){
-      response =
-        <div className="panel">
-          <h3>Player One Win!</h3>
-        </div>
+        this.setState({playerOne: "Player One Win!"})
+
     } else if (this.state.userOne === "p" && this.state.userTwo === "p"){
-        response =
-          <div className="panel">
-            <h3>Tie!</h3>
-          </div>
+        this.setState({playerOne: "Player One Tie!"})
+        this.setState({playerTwo: "Player Two Tie!"})
     } else if (this.state.userOne === "p" && this.state.userTwo === "s"){
-        response =
-          <div className="panel">
-            <h3>Player Two Win!</h3>
-          </div>
+        this.setState({playerTwo: "Player Two Win!"})
+
     } else if (this.state.userOne === "s" && this.state.userTwo === "r"){
-        response =
-          <div className="panel">
-            <h3>Player Two Win!</h3>
-          </div>
+        this.setState({playerTwo: "Player Two Win!"})
+
     } else if (this.state.userOne === "s" && this.state.userTwo === "p"){
-        response =
-          <div className="panel">
-            <h3>Player One Win!</h3>
-          </div>
+        this.setState({playerOne: "Player One Win!"})
+
     } else if (this.state.userOne === "s" && this.state.userTwo === "s"){
-        response =
-          <div className="panel">
-            <h3>Tie!</h3>
-          </div>
+        this.setState({playerOne: "Player One Tie!"})
+        this.setState({playerTwo: "Player Two Tie!"})
     } else {
-      response = null
+        null
     }
 
     let showGameTwo
@@ -165,6 +150,7 @@ class FriendGame extends React.Component {
             paper={this.state.paperTwo}
             scissors={this.state.scissorsTwo}
             resultGame={this.state.resultGame}
+            playerTwo={this.state.playerTwo}
           />
 
       }
@@ -179,6 +165,7 @@ class FriendGame extends React.Component {
           paper={this.state.paperOne}
           scissors={this.state.scissorsOne}
           resultGame={this.state.resultGame}
+          playerOne={this.state.playerOne}
 
           />
 
@@ -190,7 +177,6 @@ class FriendGame extends React.Component {
       <div>
       {showGameOne}
       {showGameTwo}
-      {response}
       <button className="button" onClick={this.cleanOnClick}>Start New Game</button>
       </div>
 
