@@ -21,6 +21,8 @@
         <%= link_to 'Sign in', user_session_path, class: "right" %>
       <% else %>
         <%= image_tag(current_user.profile_photo, class: 'picture') if current_user.profile_photo? %>
+        <%= link_to 'Edit Account Info', edit_user_registration_path, class: "right" %>
+
         <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "right" %>
       <% end %>
     </div>
