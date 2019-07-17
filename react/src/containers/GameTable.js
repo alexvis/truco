@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router'
+import React from 'react';
+import { Link } from 'react-router';
 
 class GameTable extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       rock: null,
       paper: null,
@@ -11,7 +11,7 @@ class GameTable extends React.Component {
       userInput: null,
       computerInput: null,
 
-    }
+    };
     this.handleRockClick = this.handleRockClick.bind(this);
     this.handlePaperClick = this.handlePaperClick.bind(this);
     this.handleScissorsClick = this.handleScissorsClick.bind(this);

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
   resources :computer, only: [:index]
   resources :friend, only: [:index]
+  resources :truco, only: [:index]
 
 
 end

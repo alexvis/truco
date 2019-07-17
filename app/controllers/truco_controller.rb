@@ -1,7 +1,7 @@
-class FriendController < ApplicationController
+class TrucoController < ApplicationController
   before_action :authorize_user
-  def index
 
+  def index
   end
 
   def authorize_user
