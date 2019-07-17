@@ -32,7 +32,6 @@ class GameTable extends React.Component {
     this.setState({paper: "Paper"})
     this.setState({rock: null})
     this.setState({scissors: null})
-
   }
 
   handleScissorsClick(){

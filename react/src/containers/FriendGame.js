@@ -1,6 +1,6 @@
 import React from 'react';
-import FriendGameUserTwo from '../components/FriendGameUserTwo'
-import FriendGameUserOne from '../components/FriendGameUserOne'
+import FriendGameUserTwo from '../components/FriendGameUserTwo';
+import FriendGameUserOne from '../components/FriendGameUserOne';
 
 class FriendGame extends React.Component {
   constructor(props) {
@@ -69,7 +69,6 @@ class FriendGame extends React.Component {
     this.setState({userTwo: "p"});
     this.setState({showAll: null});
     this.setState({showGameOne: null});
-    this.setState({showGameTwo: "show"});
     this.setState({paperTwo: "Paper"});
     this.setState({resultGame: "stop"});
 
@@ -99,45 +98,43 @@ class FriendGame extends React.Component {
     this.setState({showAll: null});
     this.setState({resultGame: null});
     this.setState({playerOne: "Player One"});
-    this.setState({playerTwo: "Player Two"})
+    this.setState({playerTwo: "Player Two"});
   }
-
-
 
   render(){
     if (this.state.userOne === "r" && this.state.userTwo === "r"){
-        this.setState({playerOne: "Player One Tie!"})
-        this.setState({playerTwo: "Player Two Tie!"})
+        this.setState({playerOne: "Player One Tie!"});
+        this.setState({playerTwo: "Player Two Tie!"});
     } else if (this.state.userOne === "r" && this.state.userTwo === "p"){
-        this.setState({playerTwo: "Player Two Win!"})
+        this.setState({playerTwo: "Player Two Win!"});
 
     } else if (this.state.userOne === "r" && this.state.userTwo === "s"){
-        this.setState({playerOne: "Player One Win!"})
+        this.setState({playerOne: "Player One Win!"});
 
     } else if (this.state.userOne === "p" && this.state.userTwo === "r"){
-        this.setState({playerOne: "Player One Win!"})
+        this.setState({playerOne: "Player One Win!"});
 
     } else if (this.state.userOne === "p" && this.state.userTwo === "p"){
-        this.setState({playerOne: "Player One Tie!"})
-        this.setState({playerTwo: "Player Two Tie!"})
+        this.setState({playerOne: "Player One Tie!"});
+        this.setState({playerTwo: "Player Two Tie!"});
     } else if (this.state.userOne === "p" && this.state.userTwo === "s"){
-        this.setState({playerTwo: "Player Two Win!"})
+        this.setState({playerTwo: "Player Two Win!"});
 
     } else if (this.state.userOne === "s" && this.state.userTwo === "r"){
-        this.setState({playerTwo: "Player Two Win!"})
+        this.setState({playerTwo: "Player Two Win!"});
 
     } else if (this.state.userOne === "s" && this.state.userTwo === "p"){
-        this.setState({playerOne: "Player One Win!"})
+        this.setState({playerOne: "Player One Win!"});
 
     } else if (this.state.userOne === "s" && this.state.userTwo === "s"){
-        this.setState({playerOne: "Player One Tie!"})
-        this.setState({playerTwo: "Player Two Tie!"})
+        this.setState({playerOne: "Player One Tie!"});
+        this.setState({playerTwo: "Player Two Tie!"});
     } else {
-        null
+        "<h1> Hello </h1>"
     }
 
-    let showGameTwo
-    let showGameOne
+    let showGameTwo;
+    let showGameOne;
 
     if(this.state.showAll === null){
       if(this.state.showGameTwo){
@@ -157,29 +154,28 @@ class FriendGame extends React.Component {
 
       if(this.state.showGameOne === null){
         showGameOne =
-          <FriendGameUserOne
-          handleRockClickOne={this.handleRockClickOne}
-          handlePaperClickOne={this.handlePaperClickOne}
-          handleScissorsClickOne={this.handleScissorsClickOne}
-          rock={this.state.rockOne}
-          paper={this.state.paperOne}
-          scissors={this.state.scissorsOne}
-          resultGame={this.state.resultGame}
-          playerOne={this.state.playerOne}
+        <FriendGameUserOne
+        handleRockClickOne={this.handleRockClickOne}
+        handlePaperClickOne={this.handlePaperClickOne}
+        handleScissorsClickOne={this.handleScissorsClickOne}
+        rock={this.state.rockOne}
+        paper={this.state.paperOne}
+        scissors={this.state.scissorsOne}
+        resultGame={this.state.resultGame}
+        playerOne={this.state.playerOne}
 
-          />
-
+        />
       }
     } else {
       <h1>hello</h1>
     }
     return(
       <div>
-      {showGameOne}
-      {showGameTwo}
-      <button className="button" onClick={this.cleanOnClick}>Start New Game</button>
+        {showGameOne}
+        {showGameTwo}
+        <button className="button" onClick={this.cleanOnClick}>Start New Game</button>
+        {this.props.children}
       </div>
-
     )
   }
 }
